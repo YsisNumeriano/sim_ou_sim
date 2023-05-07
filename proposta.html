@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="#" hred="script.js"></script>
+    <title>Proposta</title>
+</head>
+
+<body>
+    <h1>Casa comigo?</h1>
+    <div id="buttons">
+        <button id="yes-btn" onclick="redirectToUhuuu()">sim</button>
+        <button id="no-btn" onclick="moveButton()">Não</button>
+    </div>
+    <script>
+        function moveButton() {
+            var button = document.getElementById("no-btn");
+            var windowHeight = window.innerHeight;
+            var windowWidth = window.innerWidth;
+            var buttonHeight = button.offsetHeight;
+            var buttonWidth = button.offsetWidth;
+            var newBottom = Math.random() * (windowHeight - buttonHeight);
+            var newLeft = Math.random() * (windowWidth - buttonWidth);
+            button.classList.add('moving');
+            button.style.bottom = newBottom + "px";
+            button.style.left = newLeft + "px";
+        }
+
+        function redirectToUhuuu() {
+            window.location.href = "heart.png";
+        }
+    </script>
+
+
+
+</body>
+
+</html>
